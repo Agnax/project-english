@@ -1,15 +1,35 @@
-// Variables
+/*font Variables*/
+$pop: 'Poppins', sans-serif;
+$play: 'Playfair Display', serif;
+/*Color Variables*/
 
-$white: #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #868e96 !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black: #161616 !default;
+$baseColor: #2bc0a4;
+$dip: #232d37;
+//$gray: #757575;
+$pfont: #51545f;
 
-$primary: #64a19d !default;
+
+
+// Mixins
+@mixin transition($property: all, $duration: 400ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
+
+// Placeholder Mixins
+@mixin placeholder {
+  &.placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &::-webkit-input-placeholder { @content; }
+}
+
+.col-md-offset-right-1,.col-lg-offset-right-1{
+    margin-right: 8.33333333%;
+}
+// Font family link
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Poppins:300,400,500,600,700,800,900');
+
+//@font-face {
+//    font-family: "ralH";
+//    src: url(../fonts/theme-font/Arial.ttf.woff);
+//}
